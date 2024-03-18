@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <section class="playList">
+        <!-- music img -->
+        <div class="img">
+            <img src="img/img.jpg" alt="">
+        </div>
+        <!-- playing -->
+        <marquee scrollamount="3">
+            no sound , open playlist and choose sound
+        </marquee>
+        <!-- controls Container -->
+        <div class="controlsContainer">
+            <button id="volumeBtn" disabled volume="on">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <button id="prevBtn" disabled>
+                <i class="fa-solid fa-backward"></i>
+            </button>
+            <button id="playBtn" class="pause" playing="on" disabled>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-pause"></i>
+            </button>
+            <button id="nextBtn" disabled>
+                <i class="fa-solid fa-forward"></i>
+            </button>
+            <button id="listBtn" status="off">
+                <i class="fa-solid fa-list-ul"></i>
+            </button>
+        </div>
+
+        <!-- musicList -->
+        <div class="musicList" id="mContainer">
+            <div class="child">
+                <p class="title">playlist</p>
+                <!-- sound container -->
+                <div class="sounds-container">
+                    <!-- sound row -->
+                    <div class="sound">
+                        <!-- file -->
+                        <audio src="audio/001.mp3"></audio>
+                        <!-- left -->
+                        <div class="l-part">
+                            <span class="play-icon">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                            <p class="sound-title">سورة الفاتحة - Al-Fātihah</p>
+                        </div>
+                        <div class="r-part">
+                            <div class="duration">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>05:00</span>
+                            </div>
+                            <div id="playingIcon">
+                                <img src="img/wave.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sound row -->
+                    <div class="sound">
+                        <!-- file -->
+                        <audio src="audio/002.mp3"></audio>
+                        <!-- left -->
+                        <div class="l-part">
+                            <span class="play-icon">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                            <p class="sound-title">سورة البقرة - Al-Baqarah</p>
+                        </div>
+                        <div class="r-part">
+                            <div class="duration">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>05:00</span>
+                            </div>
+                            <div id="playingIcon">
+                                <img src="img/wave.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sound row -->
+                    <div class="sound">
+                        <!-- file -->
+                        <audio src="audio/003.mp3"></audio>
+                        <!-- left -->
+                        <div class="l-part">
+                            <span class="play-icon">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                            <p class="sound-title">سورة آل عمران - Āl-‘Imrān</p>
+                        </div>
+                        <div class="r-part">
+                            <div class="duration">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>05:00</span>
+                            </div>
+                            <div id="playingIcon">
+                                <img src="img/wave.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sound row -->
+                    <div class="sound">
+                        <!-- file -->
+                        <audio src="audio/003.mp3"></audio>
+                        <!-- left -->
+                        <div class="l-part">
+                            <span class="play-icon">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                            <p class="sound-title">سورة النساء - An-Nisā’</p>
+                        </div>
+                        <div class="r-part">
+                            <div class="duration">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>05:00</span>
+                            </div>
+                            <div id="playingIcon">
+                                <img src="img/wave.gif">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sound row -->
+                    <div class="sound">
+                        <!-- file -->
+                        <audio src="audio/005.mp3"></audio>
+                        <!-- left -->
+                        <div class="l-part">
+                            <span class="play-icon">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                            <p class="sound-title">سورة المائدة - Al-Mā’idah</p>
+                        </div>
+                        <div class="r-part">
+                            <div class="duration">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>05:00</span>
+                            </div>
+                            <div id="playingIcon">
+                                <img src="img/wave.gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jq.js"></script>
+</body>
+
+</html>

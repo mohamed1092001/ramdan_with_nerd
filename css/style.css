@@ -1,0 +1,258 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Cairo';
+}
+
+body {
+    background-color: #7694b7;
+    height: 100vh;
+    display: flex;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #7694b7;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+    transition: 1s;
+}
+
+:hover::-webkit-scrollbar-thumb {
+    background: #6c79bc;
+}
+
+
+.playList {
+    width: 350px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3), inset 0px 0px 15px rgba(0, 0, 0, 0.4);
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.playList .img {
+    width: 100%;
+    padding: 25px;
+    padding-bottom: 0px;
+}
+
+.playList .img img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.controlsContainer {
+    display: flex;
+    width: calc(100% - 50px);
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.controlsContainer button {
+    width: 52px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #6c91bc;
+    background-color: #f0f0f0;
+    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: .3s;
+}
+
+.controlsContainer button:hover,
+button.active {
+    background-color: #6c91bc;
+}
+
+.controlsContainer button::after,
+button.active::after {
+    content: " ";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    background-color: #6c91bc;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .3s;
+}
+
+.controlsContainer button i {
+    position: relative;
+    z-index: 1;
+}
+
+.controlsContainer button:hover::after,
+button.active::after {
+    transform: scale(1.01);
+}
+
+.controlsContainer button:hover i,
+.controlsContainer button.active i {
+    color: #fff;
+}
+
+.pause .fa-pause {
+    display: none !important;
+}
+
+.pause .fa-play {
+    display: block !important;
+}
+
+.playOn .fa-pause {
+    display: block !important;
+}
+
+.playOn .fa-play {
+    display: none !important;
+}
+
+
+/* musicList */
+
+
+.musicList {
+    transition: .4s;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+
+}
+
+.musicList .child {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+.sounds-container {
+    overflow: auto;
+    height: 150px;
+}
+
+.title {
+    padding: 0px 25px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    color: #6c79bc;
+    text-shadow: 0px 0px 10px #0000005b;
+}
+
+.sound {
+    padding: 8px 25px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #ddd;
+    transition: .2s;
+}
+
+.sound:hover {
+    box-shadow: inset 0px 0px 15px #31313169;
+    background-color: #6c79bcab;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sound>* {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.sound i {
+    color: #6c79bc;
+    font-size: 20px;
+}
+
+.sound:hover i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.l-part {
+    line-height: 17px;
+}
+
+
+.sound .duration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    gap: 3px;
+}
+
+.sound .play-icon {
+    width: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.sound:hover .play-icon {
+    width: 20px;
+}
+
+.playingSound .play-icon {
+    width: 20px !important;
+}
+
+.pause .play-icon {
+    width: 20px !important;
+}
+
+.sound #playingIcon {
+    background-color: #6c79bc;
+    width: 0px;
+    border-radius: 3px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+}
+
+.playingSound #playingIcon {
+    width: 50px !important;
+}
+
+.sound #playingIcon img {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+marquee {
+    background-color: #626eac;
+    text-transform: capitalize;
+    width: calc(100% - 50px);
+    margin: auto;
+    border-radius: 3px;
+    color: #ffffffc0;
+    box-shadow: 0px 10px 15px #0000004d, inset 0px 0px 10px #0000004d;
+}
