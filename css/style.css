@@ -68,7 +68,7 @@ body {
 }
 
 .controlsContainer button {
-    width: 52px;
+    width: 17%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: none;
@@ -257,8 +257,9 @@ marquee {
     box-shadow: 0px 10px 15px #0000004d, inset 0px 0px 10px #0000004d;
 }
 
-@media (min-width:0px) and (max-width:700px){
-    .playList{
+
+@media (min-width:0px) and (max-width:700px) {
+    .playList {
         width: 80% !important;
     }
 }
