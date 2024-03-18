@@ -256,3 +256,9 @@ marquee {
     color: #ffffffc0;
     box-shadow: 0px 10px 15px #0000004d, inset 0px 0px 10px #0000004d;
 }
+
+@media (min-width:0px) and (max-width:700px){
+    .playList{
+        width: 80% !important;
+    }
+}
